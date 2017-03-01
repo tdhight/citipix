@@ -10,17 +10,9 @@
 
 $(document).ready(function(){
 	console.log('this is running');
-	var city = $('#city-type').val();
-
-	$('#entry').submit(function(event) {
-    
-    	console.log("the event is: ",event);
-    	// https://api.jquery.com/event.preventdefault/
-    	//https://www.w3schools.com/jquery/event_preventdefault.asp
-    	event.preventDefault();
-	});
 
 	function newCity() {
+		var city = $('#city-type').val();
 		if (city === 'New York' || city === 'New York City' || city === 'NYC') {
 			console.log('nyc');
 			$('body').addClass('nyc');
@@ -34,9 +26,13 @@ $(document).ready(function(){
 		} else if (city === 'Sydney' || city === 'SYD') {
 			$('body').addClass('sydney');
 		} else {
-			$('body').css('background-image', 'url(images/citipix_skyline.jpg');
+			$('body').addClass('none');
 		}
 	}
+	$('#submit-btn').click(function(event) {   
+    	console.log("the event is: ",event);
+    	event.preventDefault();
+	});
 	$('#submit-btn').click(newCity);
 
 });
