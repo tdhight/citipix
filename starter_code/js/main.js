@@ -21,17 +21,17 @@ $(document).ready(function(){
 	});
 
 	function newCity() {
-		if (city === 'New York' || 'New York City' || 'NYC') {
+		if (city === 'New York' || city === 'New York City' || city === 'NYC') {
 			console.log('nyc');
 			$('body').addClass('nyc');
-		} else if (city === 'San Francisco' || 'SF' || 'Bay Area') {
+		} else if (city === 'San Francisco' || city === 'SF' || city === 'Bay Area') {
 			console.log('sf');
-			$('body').addClass('sf');
-		} else if (city === 'Los Angeles' || 'LA' || 'LAX') {
+			$('body').addClass('sf');	
+		} else if (city === 'Los Angeles' || city === 'LA' || city === 'LAX') {
 			$('body').addClass('la');
-		} else if (city === 'Austin' || 'ATX') {
+		} else if (city === 'Austin' || city === 'ATX') {
 			$('body').addClass('austin');
-		} else if (city === 'Sydney' || 'SYD') {
+		} else if (city === 'Sydney' || city === 'SYD') {
 			$('body').addClass('sydney');
 		} else {
 			$('body').css('background-image', 'url(images/citipix_skyline.jpg');
